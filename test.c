@@ -4,15 +4,7 @@ int listSize = 5;
 int numberArray[5];
 int valueConsideredEmpty = 0;
 
-void sendRepeatingChars(int count, char *charToRepeat) {
-    int i = 0;
-    for (i = 1; i <= count; i++) {
-        printf("%s", charToRepeat);
-    }
-    i = 0;
-}
-
-void setStackDefaultData (int passedArray[listSize]) {
+void setStackDefaultData(int passedArray[listSize]) {
     int i = 0;
     for (i = 0; i < listSize; i++) {
         passedArray[i] = valueConsideredEmpty;
@@ -86,19 +78,17 @@ int stackIsEmpty(int passedArray[listSize]) {
 
 int main () {
     int choice = 0;
-    sendRepeatingChars(3, "*");
-    printf(" Stack in C ");
-    sendRepeatingChars(3, "*");
+    printf("*** Stack in C ***");
     setStackDefaultData(numberArray);
     int newStackInput = 0;
     while (choice != 4) {
-        sendRepeatingChars(2, "\n");
-        sendRepeatingChars(20, "-");
+        printf("\n\n");
+        printf("--------------------");
         printf("\n");
         printf("Choose what to do:");
-        sendRepeatingChars(2, "\n");
+        printf("\n\n");
         printf("(1) Push data to stack\n(2) Pop data from stack\n(3) Diplay stack data\n(4) Exit program");
-        sendRepeatingChars(2, "\n");
+        printf("\n\n");
         printf("What to do? : ");
         scanf("%d", &choice);
         printf("\n");
@@ -137,6 +127,6 @@ int main () {
                 break;
         }
     }
-    sendRepeatingChars(2, "\n");
+    printf("\n\n");
     return 0;
 }
